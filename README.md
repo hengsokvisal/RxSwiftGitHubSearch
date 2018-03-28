@@ -1,2 +1,1 @@
-# RxSwiftGitHubSearch
 RxSwiftGitHubSearch
