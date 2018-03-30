@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="z3h-UW-YJu">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="erJ-rZ-m4D">
+            <objects>
+                <navigationController id="z3h-UW-YJu" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="OUm-uP-n3p">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="EOs-Tt-Pg5" kind="relationship" relationship="rootViewController" id="EoG-aO-0HH"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="c0I-Es-sAD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-949" y="150"/>
+        </scene>
+        <!--GithubSearchRepositories-->
+        <scene sceneID="XVS-Fa-Sbi">
+            <objects>
+                <viewController id="EOs-Tt-Pg5" customClass="ViewController" customModule="GithubSearchRepositories" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5Dt-uu-x29">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="mFm-ES-Vkv">
+                                <rect key="frame" x="0.0" y="120" width="375" height="547"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="jyI-Yz-4L3" detailTextLabel="O6K-tJ-4nU" style="IBUITableViewCellStyleSubtitle" id="ufD-wa-LrP">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ufD-wa-LrP" id="Ii2-mE-EQ6">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="jyI-Yz-4L3">
+                                                    <rect key="frame" x="15" y="5" width="33.5" height="20.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="O6K-tJ-4nU">
+                                                    <rect key="frame" x="15" y="25.5" width="44" height="14.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <searchBar contentMode="redraw" placeholder="Search Repository" translatesAutoresizingMaskIntoConstraints="NO" id="aKG-IA-67U">
+                                <rect key="frame" x="0.0" y="64" width="375" height="56"/>
+                                <color key="barTintColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="mFm-ES-Vkv" firstAttribute="trailing" secondItem="hfJ-rc-PS7" secondAttribute="trailing" id="0gR-G8-7da"/>
+                            <constraint firstItem="hfJ-rc-PS7" firstAttribute="bottom" secondItem="aKG-IA-67U" secondAttribute="bottom" constant="547" id="2GT-1a-Wcf"/>
+                            <constraint firstItem="mFm-ES-Vkv" firstAttribute="leading" secondItem="hfJ-rc-PS7" secondAttribute="leading" id="7Ye-hw-Wge"/>
+                            <constraint firstItem="mFm-ES-Vkv" firstAttribute="top" secondItem="aKG-IA-67U" secondAttribute="bottom" id="ISs-nS-XfR"/>
+                            <constraint firstItem="aKG-IA-67U" firstAttribute="top" secondItem="hfJ-rc-PS7" secondAttribute="top" id="WK2-AK-Jkt"/>
+                            <constraint firstItem="mFm-ES-Vkv" firstAttribute="bottom" secondItem="hfJ-rc-PS7" secondAttribute="bottom" id="dEQ-jH-45Z"/>
+                            <constraint firstItem="aKG-IA-67U" firstAttribute="leading" secondItem="hfJ-rc-PS7" secondAttribute="leading" id="hbS-Ve-jAV"/>
+                            <constraint firstItem="aKG-IA-67U" firstAttribute="trailing" secondItem="hfJ-rc-PS7" secondAttribute="trailing" id="wAx-X1-uSC"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="hfJ-rc-PS7"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="GithubSearchRepositories" id="Rte-CQ-ToK" userLabel="Github"/>
+                    <connections>
+                        <outlet property="searchBox" destination="aKG-IA-67U" id="pQq-iS-Z4w"/>
+                        <outlet property="tableView" destination="mFm-ES-Vkv" id="9eD-5E-Igc"/>
+                        <segue destination="2h8-9K-iCD" kind="show" identifier="webView" id="c3x-m0-HdC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="C4a-Zk-HAZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-223" y="150"/>
+        </scene>
+        <!--Web View View Controller-->
+        <scene sceneID="Zoc-mP-zi2">
+            <objects>
+                <viewController id="2h8-9K-iCD" customClass="webViewViewController" customModule="GithubSearchRepositories" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="uTC-aB-wTc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8CD-wd-Vx7">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="8CD-wd-Vx7" firstAttribute="trailing" secondItem="xaB-WX-cDA" secondAttribute="trailing" id="3df-0i-GFw"/>
+                            <constraint firstItem="8CD-wd-Vx7" firstAttribute="top" secondItem="xaB-WX-cDA" secondAttribute="top" id="3jW-87-NbM"/>
+                            <constraint firstItem="8CD-wd-Vx7" firstAttribute="leading" secondItem="xaB-WX-cDA" secondAttribute="leading" id="B8e-6O-mEM"/>
+                            <constraint firstItem="8CD-wd-Vx7" firstAttribute="bottom" secondItem="xaB-WX-cDA" secondAttribute="bottom" id="qJl-a5-vIb"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="xaB-WX-cDA"/>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="8CD-wd-Vx7" id="onj-MK-rrL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kH9-fW-6og" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="514" y="150"/>
+        </scene>
+    </scenes>
+</document>

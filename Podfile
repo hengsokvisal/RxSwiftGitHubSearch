@@ -1,10 +1,11 @@
-use_frameworks!
+# Uncomment the next line to define a global platform for your project
+platform :ios, '10.0'
 
-target 'RxSwiftiOS' do
-  pod 'RxSwift', '~> 3.1'
-  pod 'RxCocoa', '~> 3.1'
-  pod 'Unbox', '~> 2.3'
-  pod 'RealmSwift', '~> 2.7'
-  pod 'RxRealm', '~> 0.6'
-  pod 'RxRealmDataSources', '~> 0.2'
+target 'GithubSearchRepositories' do
+  use_frameworks!
+
+    pod "RxSwift"
+    pod "RxCocoa"
+    pod "Unbox"
+
 end
